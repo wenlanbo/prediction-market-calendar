@@ -58,6 +58,25 @@ npm run dev
 
 This project is designed to run on Railway with automatic updates via cron jobs.
 
+### Deploy to Railway
+
+1. Fork or use this repository
+2. Connect your GitHub account to Railway
+3. Create a new project and select this repository
+4. Railway will automatically detect the configuration and deploy
+5. The app will generate calendars on startup and refresh hourly
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/wenlanbo/prediction-market-calendar)
+
+### Environment Variables
+
+The following environment variables can be configured in Railway:
+
+- `PORT` - Server port (Railway provides this automatically)
+- `POLYMARKET_API_KEY` - (Optional) For enhanced API access
+- `TWITTER_API_KEY` - (Optional) For real Twitter data
+- `REFRESH_INTERVAL` - (Optional) Cron schedule for updates (default: hourly)
+
 ## Contributing
 
 Feel free to open issues or submit PRs for new event sources, better matching algorithms, or UI improvements!
