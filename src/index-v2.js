@@ -317,9 +317,13 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                                     <strong style="color: #10B981">42.space Market</strong><br>
                                     <span style="font-size: 0.85em; color: #ccc">Contract: ${match.market.contractAddress}</span><br>
                                     <div style="margin-top: 8px;">
-                                        <a href="${match.market.url}" target="_blank" class="link-button" style="background: #10B981">
-                                            View on 42.space →
+                                        <a href="${match.market.searchUrl || match.market.url}" target="_blank" class="link-button" style="background: #10B981">
+                                            Search on 42.space →
                                         </a>
+                                    </div>
+                                    <div style="font-size: 0.8em; color: #999; margin-top: 5px">
+                                        Search for: "${match.market.question.substring(0, 50)}..."<br>
+                                        Note: Direct market links have a known mapping issue
                                     </div>
                                 </div>
                             ` : `

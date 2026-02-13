@@ -1,12 +1,107 @@
 {
-  "generated": "2026-02-13T22:28:48.654Z",
+  "generated": "2026-02-13T22:41:10.457Z",
   "stats": {
     "polymarketCount": 0,
-    "fortyTwoCount": 2,
+    "fortyTwoCount": 4,
     "eventCount": 23,
-    "matchCount": 5
+    "matchCount": 13
   },
   "matches": [
+    {
+      "event": {
+        "name": "FIFA Club World Cup",
+        "date": "2025-06-15",
+        "category": "Sports",
+        "subcategory": "Soccer",
+        "description": "Expanded 32-team tournament in USA",
+        "keywords": [
+          "fifa",
+          "club world cup",
+          "soccer",
+          "football"
+        ]
+      },
+      "market": {
+        "id": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "contractAddress": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "question": "FIFA WC 2026: MEX vs RSA? [[test]]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **Mexico** and **South Africa**, scheduled for June 11, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official FIFA World Cup 2026 Website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)\n\n[Official Scores & Fixtures, and Schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=SG&wtw-filter=ALL)\n\n## Additional Information\n*This market will end once the match begins, and will be resolved within 24 hours of the official announcement of the score.*",
+        "volume": 109909.44258218106,
+        "marketCap": 98104.29417277561,
+        "endDate": "2026-02-03T14:00:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 31438.728775980813,
+            "price_hmr": 0.03714791729955997,
+            "payout_hmr": 0.06624026604273786
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.046522336824562,
+            "price_hmr": 0.000878481651438868,
+            "payout_hmr": 9.767258136315048
+          },
+          {
+            "token_id": 4,
+            "name": "Mexico_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "Mexico Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9068.683278155704,
+            "price_hmr": 0.021803380122717,
+            "payout_hmr": 0.13479453673870473
+          },
+          {
+            "token_id": 8,
+            "name": "South_Africa_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "South Africa Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 57591.83559630226,
+            "price_hmr": 0.047147571629602834,
+            "payout_hmr": 0.04820456998864309
+          },
+          {
+            "token_id": 16,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 4,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": null,
+            "price_hmr": null,
+            "payout_hmr": null
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": true,
+        "resolvedAnswer": "0",
+        "traders": 5,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767680715654-grdwd6dyeb7.png",
+        "url": "https://42.space/event/0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=FIFA%20WC%202026%3A%20MEX%20vs%20RSA%3F%20%5B%5Btest%5D%5D",
+        "source": "42"
+      },
+      "score": 9,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
     {
       "event": {
         "name": "Google I/O 2025",
@@ -136,9 +231,11 @@
         "resolved": false,
         "resolvedAnswer": null,
         "traders": 8,
-        "elapsedPercent": "0.03259275286402927",
+        "elapsedPercent": "0.03261870326776789",
         "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
         "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=Backpack%20market%20cap%20(FDV)%20one%20day%20after%20TGE%3F%20%5Bstart%3A%20LAUNCH%20DAY%5D",
         "source": "42"
       },
       "score": 4,
@@ -285,9 +382,11 @@
         "resolved": false,
         "resolvedAnswer": null,
         "traders": 5,
-        "elapsedPercent": "0.032620198827925204",
+        "elapsedPercent": "0.032646148495434235",
         "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
         "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=What%20will%20SpaceX's%20public%20ticker%20be%3F",
         "source": "42"
       },
       "score": 4,
@@ -422,9 +521,11 @@
         "resolved": false,
         "resolvedAnswer": null,
         "traders": 8,
-        "elapsedPercent": "0.03259275286402927",
+        "elapsedPercent": "0.03261870326776789",
         "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
         "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=Backpack%20market%20cap%20(FDV)%20one%20day%20after%20TGE%3F%20%5Bstart%3A%20LAUNCH%20DAY%5D",
         "source": "42"
       },
       "score": 3,
@@ -559,9 +660,630 @@
         "resolved": false,
         "resolvedAnswer": null,
         "traders": 8,
-        "elapsedPercent": "0.03259275286402927",
+        "elapsedPercent": "0.03261870326776789",
         "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
         "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=Backpack%20market%20cap%20(FDV)%20one%20day%20after%20TGE%3F%20%5Bstart%3A%20LAUNCH%20DAY%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Super Bowl LIX",
+        "date": "2025-02-09",
+        "category": "Sports",
+        "subcategory": "NFL",
+        "description": "NFL Championship game in New Orleans",
+        "keywords": [
+          "super bowl",
+          "nfl",
+          "football",
+          "championship"
+        ]
+      },
+      "market": {
+        "id": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "contractAddress": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "question": "FIFA WC 2026: MEX vs RSA? [[test]]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **Mexico** and **South Africa**, scheduled for June 11, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official FIFA World Cup 2026 Website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)\n\n[Official Scores & Fixtures, and Schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=SG&wtw-filter=ALL)\n\n## Additional Information\n*This market will end once the match begins, and will be resolved within 24 hours of the official announcement of the score.*",
+        "volume": 109909.44258218106,
+        "marketCap": 98104.29417277561,
+        "endDate": "2026-02-03T14:00:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 31438.728775980813,
+            "price_hmr": 0.03714791729955997,
+            "payout_hmr": 0.06624026604273786
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.046522336824562,
+            "price_hmr": 0.000878481651438868,
+            "payout_hmr": 9.767258136315048
+          },
+          {
+            "token_id": 4,
+            "name": "Mexico_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "Mexico Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9068.683278155704,
+            "price_hmr": 0.021803380122717,
+            "payout_hmr": 0.13479453673870473
+          },
+          {
+            "token_id": 8,
+            "name": "South_Africa_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "South Africa Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 57591.83559630226,
+            "price_hmr": 0.047147571629602834,
+            "payout_hmr": 0.04820456998864309
+          },
+          {
+            "token_id": 16,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 4,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": null,
+            "price_hmr": null,
+            "payout_hmr": null
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": true,
+        "resolvedAnswer": "0",
+        "traders": 5,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767680715654-grdwd6dyeb7.png",
+        "url": "https://42.space/event/0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=FIFA%20WC%202026%3A%20MEX%20vs%20RSA%3F%20%5B%5Btest%5D%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Super Bowl LIX",
+        "date": "2025-02-09",
+        "category": "Sports",
+        "subcategory": "NFL",
+        "description": "NFL Championship game in New Orleans",
+        "keywords": [
+          "super bowl",
+          "nfl",
+          "football",
+          "championship"
+        ]
+      },
+      "market": {
+        "id": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "contractAddress": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "question": "LALIGA EA MW24: REAL OVIEDO vs ATHLETIC CLUB? [start: 10feb]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **REAL OVIEDO** and **ATHLETIC CLUB**, scheduled for February 15, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official LALIGA website](https://www.laliga.com/en-GB/laliga-easports)\n\n[Official Schedule](https://www.laliga.com/en-GB/laliga-easports/results/2025-26/gameweek-24)\n\n## Additional Information\n*This market will end before the match begins, and will be resolved within 24 hours of the official score report.*",
+        "volume": 10161.191780137382,
+        "marketCap": 10072.556461093653,
+        "endDate": "2026-02-05T07:52:56+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 4,
+            "name": "REAL_OVIEDO_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "REAL OVIEDO Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 4803.9221746469175,
+            "price_hmr": 0.016606431634919944,
+            "payout_hmr": 0.019897093660005964
+          },
+          {
+            "token_id": 8,
+            "name": "ATHLETIC_CLUB_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "ATHLETIC CLUB Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 5268.453728839109,
+            "price_hmr": 0.017276531385477065,
+            "payout_hmr": 0.01887479646317558
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 2,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767938466643-3b7kavqubx9.png",
+        "url": "https://42.space/event/0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=LALIGA%20EA%20MW24%3A%20REAL%20OVIEDO%20vs%20ATHLETIC%20CLUB%3F%20%5Bstart%3A%2010feb%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "NBA Finals Start",
+        "date": "2025-06-05",
+        "category": "Sports",
+        "subcategory": "NBA",
+        "description": "NBA Championship series begins",
+        "keywords": [
+          "nba",
+          "finals",
+          "basketball",
+          "championship"
+        ]
+      },
+      "market": {
+        "id": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "contractAddress": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "question": "FIFA WC 2026: MEX vs RSA? [[test]]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **Mexico** and **South Africa**, scheduled for June 11, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official FIFA World Cup 2026 Website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)\n\n[Official Scores & Fixtures, and Schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=SG&wtw-filter=ALL)\n\n## Additional Information\n*This market will end once the match begins, and will be resolved within 24 hours of the official announcement of the score.*",
+        "volume": 109909.44258218106,
+        "marketCap": 98104.29417277561,
+        "endDate": "2026-02-03T14:00:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 31438.728775980813,
+            "price_hmr": 0.03714791729955997,
+            "payout_hmr": 0.06624026604273786
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.046522336824562,
+            "price_hmr": 0.000878481651438868,
+            "payout_hmr": 9.767258136315048
+          },
+          {
+            "token_id": 4,
+            "name": "Mexico_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "Mexico Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9068.683278155704,
+            "price_hmr": 0.021803380122717,
+            "payout_hmr": 0.13479453673870473
+          },
+          {
+            "token_id": 8,
+            "name": "South_Africa_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "South Africa Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 57591.83559630226,
+            "price_hmr": 0.047147571629602834,
+            "payout_hmr": 0.04820456998864309
+          },
+          {
+            "token_id": 16,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 4,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": null,
+            "price_hmr": null,
+            "payout_hmr": null
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": true,
+        "resolvedAnswer": "0",
+        "traders": 5,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767680715654-grdwd6dyeb7.png",
+        "url": "https://42.space/event/0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=FIFA%20WC%202026%3A%20MEX%20vs%20RSA%3F%20%5B%5Btest%5D%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "NBA Finals Start",
+        "date": "2025-06-05",
+        "category": "Sports",
+        "subcategory": "NBA",
+        "description": "NBA Championship series begins",
+        "keywords": [
+          "nba",
+          "finals",
+          "basketball",
+          "championship"
+        ]
+      },
+      "market": {
+        "id": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "contractAddress": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "question": "LALIGA EA MW24: REAL OVIEDO vs ATHLETIC CLUB? [start: 10feb]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **REAL OVIEDO** and **ATHLETIC CLUB**, scheduled for February 15, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official LALIGA website](https://www.laliga.com/en-GB/laliga-easports)\n\n[Official Schedule](https://www.laliga.com/en-GB/laliga-easports/results/2025-26/gameweek-24)\n\n## Additional Information\n*This market will end before the match begins, and will be resolved within 24 hours of the official score report.*",
+        "volume": 10161.191780137382,
+        "marketCap": 10072.556461093653,
+        "endDate": "2026-02-05T07:52:56+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 4,
+            "name": "REAL_OVIEDO_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "REAL OVIEDO Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 4803.9221746469175,
+            "price_hmr": 0.016606431634919944,
+            "payout_hmr": 0.019897093660005964
+          },
+          {
+            "token_id": 8,
+            "name": "ATHLETIC_CLUB_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "ATHLETIC CLUB Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 5268.453728839109,
+            "price_hmr": 0.017276531385477065,
+            "payout_hmr": 0.01887479646317558
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 2,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767938466643-3b7kavqubx9.png",
+        "url": "https://42.space/event/0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=LALIGA%20EA%20MW24%3A%20REAL%20OVIEDO%20vs%20ATHLETIC%20CLUB%3F%20%5Bstart%3A%2010feb%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Wimbledon Championships",
+        "date": "2025-06-30",
+        "category": "Sports",
+        "subcategory": "Tennis",
+        "description": "Tennis Grand Slam at All England Club",
+        "keywords": [
+          "wimbledon",
+          "tennis",
+          "grand slam"
+        ]
+      },
+      "market": {
+        "id": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "contractAddress": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "question": "FIFA WC 2026: MEX vs RSA? [[test]]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **Mexico** and **South Africa**, scheduled for June 11, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official FIFA World Cup 2026 Website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)\n\n[Official Scores & Fixtures, and Schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=SG&wtw-filter=ALL)\n\n## Additional Information\n*This market will end once the match begins, and will be resolved within 24 hours of the official announcement of the score.*",
+        "volume": 109909.44258218106,
+        "marketCap": 98104.29417277561,
+        "endDate": "2026-02-03T14:00:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 31438.728775980813,
+            "price_hmr": 0.03714791729955997,
+            "payout_hmr": 0.06624026604273786
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.046522336824562,
+            "price_hmr": 0.000878481651438868,
+            "payout_hmr": 9.767258136315048
+          },
+          {
+            "token_id": 4,
+            "name": "Mexico_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "Mexico Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9068.683278155704,
+            "price_hmr": 0.021803380122717,
+            "payout_hmr": 0.13479453673870473
+          },
+          {
+            "token_id": 8,
+            "name": "South_Africa_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "South Africa Win",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 57591.83559630226,
+            "price_hmr": 0.047147571629602834,
+            "payout_hmr": 0.04820456998864309
+          },
+          {
+            "token_id": 16,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 4,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": null,
+            "price_hmr": null,
+            "payout_hmr": null
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": true,
+        "resolvedAnswer": "0",
+        "traders": 5,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767680715654-grdwd6dyeb7.png",
+        "url": "https://42.space/event/0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=FIFA%20WC%202026%3A%20MEX%20vs%20RSA%3F%20%5B%5Btest%5D%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Wimbledon Championships",
+        "date": "2025-06-30",
+        "category": "Sports",
+        "subcategory": "Tennis",
+        "description": "Tennis Grand Slam at All England Club",
+        "keywords": [
+          "wimbledon",
+          "tennis",
+          "grand slam"
+        ]
+      },
+      "market": {
+        "id": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "contractAddress": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "question": "LALIGA EA MW24: REAL OVIEDO vs ATHLETIC CLUB? [start: 10feb]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **REAL OVIEDO** and **ATHLETIC CLUB**, scheduled for February 15, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official LALIGA website](https://www.laliga.com/en-GB/laliga-easports)\n\n[Official Schedule](https://www.laliga.com/en-GB/laliga-easports/results/2025-26/gameweek-24)\n\n## Additional Information\n*This market will end before the match begins, and will be resolved within 24 hours of the official score report.*",
+        "volume": 10161.191780137382,
+        "marketCap": 10072.556461093653,
+        "endDate": "2026-02-05T07:52:56+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 4,
+            "name": "REAL_OVIEDO_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "REAL OVIEDO Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 4803.9221746469175,
+            "price_hmr": 0.016606431634919944,
+            "payout_hmr": 0.019897093660005964
+          },
+          {
+            "token_id": 8,
+            "name": "ATHLETIC_CLUB_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "ATHLETIC CLUB Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 5268.453728839109,
+            "price_hmr": 0.017276531385477065,
+            "payout_hmr": 0.01887479646317558
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 2,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767938466643-3b7kavqubx9.png",
+        "url": "https://42.space/event/0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=LALIGA%20EA%20MW24%3A%20REAL%20OVIEDO%20vs%20ATHLETIC%20CLUB%3F%20%5Bstart%3A%2010feb%5D",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "FIFA Club World Cup",
+        "date": "2025-06-15",
+        "category": "Sports",
+        "subcategory": "Soccer",
+        "description": "Expanded 32-team tournament in USA",
+        "keywords": [
+          "fifa",
+          "club world cup",
+          "soccer",
+          "football"
+        ]
+      },
+      "market": {
+        "id": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "contractAddress": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "question": "LALIGA EA MW24: REAL OVIEDO vs ATHLETIC CLUB? [start: 10feb]",
+        "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **REAL OVIEDO** and **ATHLETIC CLUB**, scheduled for February 15, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official LALIGA website](https://www.laliga.com/en-GB/laliga-easports)\n\n[Official Schedule](https://www.laliga.com/en-GB/laliga-easports/results/2025-26/gameweek-24)\n\n## Additional Information\n*This market will end before the match begins, and will be resolved within 24 hours of the official score report.*",
+        "volume": 10161.191780137382,
+        "marketCap": 10072.556461093653,
+        "endDate": "2026-02-05T07:52:56+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "Draw",
+            "index_outcome_from_zero": 0,
+            "symbol": "Draw",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 2,
+            "name": "N/A",
+            "index_outcome_from_zero": 1,
+            "symbol": "N/A",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 0.0902788038125164,
+            "price_hmr": 0.000156635629693379,
+            "payout_hmr": 10.072556461093653
+          },
+          {
+            "token_id": 4,
+            "name": "REAL_OVIEDO_Win",
+            "index_outcome_from_zero": 2,
+            "symbol": "REAL OVIEDO Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 4803.9221746469175,
+            "price_hmr": 0.016606431634919944,
+            "payout_hmr": 0.019897093660005964
+          },
+          {
+            "token_id": 8,
+            "name": "ATHLETIC_CLUB_Win",
+            "index_outcome_from_zero": 3,
+            "symbol": "ATHLETIC CLUB Win",
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 5268.453728839109,
+            "price_hmr": 0.017276531385477065,
+            "payout_hmr": 0.01887479646317558
+          }
+        ],
+        "category": "Sports",
+        "status": "pending_resolution",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 2,
+        "elapsedPercent": "1",
+        "image": "https://assets.dev-api.42.space/img/1767938466643-3b7kavqubx9.png",
+        "url": "https://42.space/event/0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=LALIGA%20EA%20MW24%3A%20REAL%20OVIEDO%20vs%20ATHLETIC%20CLUB%3F%20%5Bstart%3A%2010feb%5D",
         "source": "42"
       },
       "score": 3,
@@ -708,9 +1430,11 @@
         "resolved": false,
         "resolvedAnswer": null,
         "traders": 5,
-        "elapsedPercent": "0.032620198827925204",
+        "elapsedPercent": "0.032646148495434235",
         "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
         "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+        "searchUrl": "https://42.space/search?q=What%20will%20SpaceX's%20public%20ticker%20be%3F",
         "source": "42"
       },
       "score": 3,
@@ -721,6 +1445,83 @@
   "marketsByCategory": {},
   "topPolymarkets": [],
   "topFortyTwo": [
+    {
+      "id": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+      "contractAddress": "0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+      "question": "FIFA WC 2026: MEX vs RSA? [[test]]",
+      "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **Mexico** and **South Africa**, scheduled for June 11, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official FIFA World Cup 2026 Website](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026)\n\n[Official Scores & Fixtures, and Schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures?country=SG&wtw-filter=ALL)\n\n## Additional Information\n*This market will end once the match begins, and will be resolved within 24 hours of the official announcement of the score.*",
+      "volume": 109909.44258218106,
+      "marketCap": 98104.29417277561,
+      "endDate": "2026-02-03T14:00:00+00:00",
+      "outcomes": [
+        {
+          "token_id": 1,
+          "name": "Draw",
+          "index_outcome_from_zero": 0,
+          "symbol": "Draw",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 31438.728775980813,
+          "price_hmr": 0.03714791729955997,
+          "payout_hmr": 0.06624026604273786
+        },
+        {
+          "token_id": 2,
+          "name": "N/A",
+          "index_outcome_from_zero": 1,
+          "symbol": "N/A",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5.046522336824562,
+          "price_hmr": 0.000878481651438868,
+          "payout_hmr": 9.767258136315048
+        },
+        {
+          "token_id": 4,
+          "name": "Mexico_Win",
+          "index_outcome_from_zero": 2,
+          "symbol": "Mexico Win",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 9068.683278155704,
+          "price_hmr": 0.021803380122717,
+          "payout_hmr": 0.13479453673870473
+        },
+        {
+          "token_id": 8,
+          "name": "South_Africa_Win",
+          "index_outcome_from_zero": 3,
+          "symbol": "South Africa Win",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 57591.83559630226,
+          "price_hmr": 0.047147571629602834,
+          "payout_hmr": 0.04820456998864309
+        },
+        {
+          "token_id": 16,
+          "name": "NOOOOOO",
+          "index_outcome_from_zero": 4,
+          "symbol": null,
+          "description": null,
+          "image": null,
+          "market_cap_hmr": null,
+          "price_hmr": null,
+          "payout_hmr": null
+        }
+      ],
+      "category": "Sports",
+      "status": "pending_resolution",
+      "resolved": true,
+      "resolvedAnswer": "0",
+      "traders": 5,
+      "elapsedPercent": "1",
+      "image": "https://assets.dev-api.42.space/img/1767680715654-grdwd6dyeb7.png",
+      "url": "https://42.space/event/0x855BFe728dFAB2969F91B54db81d9b284D6c034e",
+      "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+      "searchUrl": "https://42.space/search?q=FIFA%20WC%202026%3A%20MEX%20vs%20RSA%3F%20%5B%5Btest%5D%5D",
+      "source": "42"
+    },
     {
       "id": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
       "contractAddress": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
@@ -835,9 +1636,11 @@
       "resolved": false,
       "resolvedAnswer": null,
       "traders": 8,
-      "elapsedPercent": "0.03259275286402927",
+      "elapsedPercent": "0.03261870326776789",
       "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
       "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+      "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+      "searchUrl": "https://42.space/search?q=Backpack%20market%20cap%20(FDV)%20one%20day%20after%20TGE%3F%20%5Bstart%3A%20LAUNCH%20DAY%5D",
       "source": "42"
     },
     {
@@ -965,9 +1768,77 @@
       "resolved": false,
       "resolvedAnswer": null,
       "traders": 5,
-      "elapsedPercent": "0.032620198827925204",
+      "elapsedPercent": "0.032646148495434235",
       "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
       "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+      "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+      "searchUrl": "https://42.space/search?q=What%20will%20SpaceX's%20public%20ticker%20be%3F",
+      "source": "42"
+    },
+    {
+      "id": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+      "contractAddress": "0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+      "question": "LALIGA EA MW24: REAL OVIEDO vs ATHLETIC CLUB? [start: 10feb]",
+      "description": "## Resolution Criteria\nThis market will resolve based on the official final score of the match between **REAL OVIEDO** and **ATHLETIC CLUB**, scheduled for February 15, 2026, including any goals scored in extra time and the outcome of a penalty shootout, as recorded by the competition organiser.\n###\n*Postponement Policy: If the match is postponed to a date more than 48 hours after the original kickoff time, the market will resolve as \"N/A\".*\n###\n*Abandonment: If the match starts but is abandoned and not completed within 48 hours, the market will resolve according to the status of the match at the time of abandonment if an official result is declared, otherwise it will resolve as \"N/A\".*\n###\n*Full-time policy: Extra time and penalty shootouts (if played) are included for resolution.*\n\n## Resolution Source\n[Official LALIGA website](https://www.laliga.com/en-GB/laliga-easports)\n\n[Official Schedule](https://www.laliga.com/en-GB/laliga-easports/results/2025-26/gameweek-24)\n\n## Additional Information\n*This market will end before the match begins, and will be resolved within 24 hours of the official score report.*",
+      "volume": 10161.191780137382,
+      "marketCap": 10072.556461093653,
+      "endDate": "2026-02-05T07:52:56+00:00",
+      "outcomes": [
+        {
+          "token_id": 1,
+          "name": "Draw",
+          "index_outcome_from_zero": 0,
+          "symbol": "Draw",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 0.0902788038125164,
+          "price_hmr": 0.000156635629693379,
+          "payout_hmr": 10.072556461093653
+        },
+        {
+          "token_id": 2,
+          "name": "N/A",
+          "index_outcome_from_zero": 1,
+          "symbol": "N/A",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 0.0902788038125164,
+          "price_hmr": 0.000156635629693379,
+          "payout_hmr": 10.072556461093653
+        },
+        {
+          "token_id": 4,
+          "name": "REAL_OVIEDO_Win",
+          "index_outcome_from_zero": 2,
+          "symbol": "REAL OVIEDO Win",
+          "description": null,
+          "image": null,
+          "market_cap_hmr": 4803.9221746469175,
+          "price_hmr": 0.016606431634919944,
+          "payout_hmr": 0.019897093660005964
+        },
+        {
+          "token_id": 8,
+          "name": "ATHLETIC_CLUB_Win",
+          "index_outcome_from_zero": 3,
+          "symbol": "ATHLETIC CLUB Win",
+          "description": null,
+          "image": null,
+          "market_cap_hmr": 5268.453728839109,
+          "price_hmr": 0.017276531385477065,
+          "payout_hmr": 0.01887479646317558
+        }
+      ],
+      "category": "Sports",
+      "status": "pending_resolution",
+      "resolved": false,
+      "resolvedAnswer": null,
+      "traders": 2,
+      "elapsedPercent": "1",
+      "image": "https://assets.dev-api.42.space/img/1767938466643-3b7kavqubx9.png",
+      "url": "https://42.space/event/0x1B4Cf2e316ca82D7F2Ed587f95Df125EA3B7BDa0",
+      "urlNote": "NOTE: This URL may not show the correct market - 42.space has a URL mapping issue",
+      "searchUrl": "https://42.space/search?q=LALIGA%20EA%20MW24%3A%20REAL%20OVIEDO%20vs%20ATHLETIC%20CLUB%3F%20%5Bstart%3A%2010feb%5D",
       "source": "42"
     }
   ],
