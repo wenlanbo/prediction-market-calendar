@@ -3,6 +3,13 @@ import axios from 'axios';
 const HASURA_ENDPOINT = 'https://dev-api.42.space/v1/graphql';
 
 // First, let's explore the schema
+// Helper function to ensure proper 42.space URL format
+function get42SpaceUrl(marketAddress) {
+  // Ensure address has 0x prefix and use correct domain
+  const address = marketAddress.startsWith('0x') ? marketAddress : `0x${marketAddress}`;
+  return `https://42.space/event/${address}`;
+}
+
 export async function explore42Schema() {
   const introspectionQuery = `
     query IntrospectionQuery {
@@ -116,13 +123,8 @@ export async function fetch42Markets() {
           traders: m.traders || 0,
           elapsedPercent: m.elapsed_pct || 0,
           image: m.image,
-          // Note: 42.space URL structure doesn't match API addresses
-          // The API returns market_address but URLs use a different identifier
-          // Users should search for the market title on 42.space directly
-          url: `https://www.42.space/event/${m.market_address}`,
-          searchUrl: `https://www.42.space/search?q=${encodeURIComponent(m.title)}`,
-          desktopOnly: true,
-          urlNote: 'URL may not work - search for the market title on 42.space',
+          // 42.space uses market_address directly in URLs (confirmed from frontend analysis)
+          url: get42SpaceUrl(m.market_address),
           source: '42'
         };
       });

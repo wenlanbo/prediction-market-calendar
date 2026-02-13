@@ -1,0 +1,1230 @@
+{
+  "generated": "2026-02-13T22:28:48.654Z",
+  "stats": {
+    "polymarketCount": 0,
+    "fortyTwoCount": 2,
+    "eventCount": 23,
+    "matchCount": 5
+  },
+  "matches": [
+    {
+      "event": {
+        "name": "Google I/O 2025",
+        "date": "2025-05-14",
+        "category": "Technology",
+        "subcategory": "Google",
+        "description": "Google Developer Conference - Android 16, AI updates",
+        "keywords": [
+          "google",
+          "io",
+          "android",
+          "ai",
+          "developer"
+        ]
+      },
+      "market": {
+        "id": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "contractAddress": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "question": "Backpack market cap (FDV) one day after TGE? [start: LAUNCH DAY]",
+        "description": "## Resolution Criteria\nThis market resolves to the bucket containing the Fully Diluted Valuation (FDV) of the official Backpack token 24 hours after its Token Generation Event (TGE). If the valuation falls exactly on a boundary, the resolution falls into the higher bucket.\n###\n**FDV Calculation Hierarchy:** \n1. Displayed FDV on the Primary Source. \n2. If unavailable, calculated as (Price × Max Supply). Max Supply is the hard cap defined in the smart contract/documentation. \n3. If unavailable, calculated as (Price × Total Supply). Total Supply is minted tokens minus burned tokens. \n###\n**Token Identification:** \n###\nMust be the official native utility or governance token of the Backpack ecosystem. If multiple tokens launch simultaneously (e.g., governance vs. utility), the market resolves based on the token with the higher FDV. If only one is tradeable on the Primary Source, that token is used. \n###\n**TGE Definition:**\n###\nThe first moment the token is available for public trading with **meaningful liquidity** (>$50,000 USD in a DEX pool or open order books on a CEX). Mere on-chain transferability does not count.\n\n## Resolution Sources\nPrimary Resolution Source: [CoinGecko](https://www.coingecko.com/)\n\nSecondary Resolution Source: [CoinMarketCap](https://coinmarketcap.com/)\n\n## Additional Information\n**Listing Delays:** \n*   If CoinGecko has not listed the token within 48 hours of TGE, CoinMarketCap becomes the Primary Source.\n*   If **neither** source has listed the token within 72 hours of TGE, resolution uses price data from the DEX/CEX with the highest verified volume combined with the Max Supply definition. \n\n**Data Discrepancies:** If FDV is ≤$0, or if the Primary Source differs from the Secondary Source by >500%, the Secondary Source is used.\n\n**TGE on Deadline:** If TGE occurs on December 31, 2026, settlement is delayed 24 hours to allow for resolution. If TGE has not occurred by December 31, 2026, at 11:59:59 PM UTC, the market resolves to \"No Token Launch\". \n\n**Airdrops:** Non-transferable points or locked tokens do not constitute a TGE; the token must be tradeable on a secondary market. \n\n**Initial Non-Transferability:** If a token is generated but remains non-transferable (locked) beyond December 31, 2026, it resolves to **\"No Token Launch\"**.\n\n**Currency:** All values are resolved in USD.",
+        "volume": 98532.2601235569,
+        "marketCap": 59384.15943347526,
+        "endDate": "2026-12-30T23:59:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "$500M_to_$750M",
+            "index_outcome_from_zero": 0,
+            "symbol": "$500M – $750M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 14.919501395969723,
+            "price_hmr": 0.001397936119939306,
+            "payout_hmr": 3.1810585162068485
+          },
+          {
+            "token_id": 2,
+            "name": "$750M_to_$1B",
+            "index_outcome_from_zero": 1,
+            "symbol": "$750M – $1B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 17584.429308125622,
+            "price_hmr": 0.02771712272236709,
+            "payout_hmr": 0.05924990743820732
+          },
+          {
+            "token_id": 4,
+            "name": "$1B_to_$1.25B",
+            "index_outcome_from_zero": 2,
+            "symbol": "$1B – $1.25B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 89.63706022235887,
+            "price_hmr": 0.002790699196367467,
+            "payout_hmr": 1.2651622296800002
+          },
+          {
+            "token_id": 8,
+            "name": "Below_$500M",
+            "index_outcome_from_zero": 3,
+            "symbol": "Below $500M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 10077.93504979699,
+            "price_hmr": 0.02275347424441661,
+            "payout_hmr": 0.07708254942484682
+          },
+          {
+            "token_id": 16,
+            "name": "$1.25B_to_$1.5B",
+            "index_outcome_from_zero": 4,
+            "symbol": "$1.25B – $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 11568.746841939157,
+            "price_hmr": 0.024136796422063202,
+            "payout_hmr": 0.07124917051278888
+          },
+          {
+            "token_id": 32,
+            "name": "Above_$1.5B",
+            "index_outcome_from_zero": 5,
+            "symbol": "Above $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 64,
+            "name": "No_Token_Launch",
+            "index_outcome_from_zero": 6,
+            "symbol": "No Token Launch",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 128,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 7,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 14.867816191097816,
+            "price_hmr": 0.00139585856634222,
+            "payout_hmr": 3.1873758823831864
+          },
+          {
+            "token_id": 256,
+            "name": "sohai",
+            "index_outcome_from_zero": 8,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 198.2496414191873,
+            "price_hmr": 0.004236128305377538,
+            "payout_hmr": 0.7251641876712072
+          }
+        ],
+        "category": "Crypto",
+        "status": "live",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 8,
+        "elapsedPercent": "0.03259275286402927",
+        "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
+        "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "source": "42"
+      },
+      "score": 4,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Google I/O 2025",
+        "date": "2025-05-14",
+        "category": "Technology",
+        "subcategory": "Google",
+        "description": "Google Developer Conference - Android 16, AI updates",
+        "keywords": [
+          "google",
+          "io",
+          "android",
+          "ai",
+          "developer"
+        ]
+      },
+      "market": {
+        "id": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "contractAddress": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "question": "What will SpaceX's public ticker be?",
+        "description": "## Resolution Criteria\nThis market resolves based on the ticker symbol used by Space Exploration Technologies Corp., or its ultimate parent entity, in its first public equity listing by December 31, 2026, 11:59 PM UTC.\n###\nA qualifying public listing is defined as any event that results in the company’s common equity becoming publicly tradeable on a recognized securities exchange, including but not limited to:\n- a traditional IPO,\n- a direct listing,\n- or a merger with a publicly traded shell or SPAC.\n###\nListings of subsidiaries, controlled affiliates, or spun-off entities (including but not limited to Starlink) do not qualify unless Space Exploration Technologies Corp. itself is the listed entity.\n\n## Resolution Source\nThe primary resolution sources will be:\n- official announcements from SpaceX,\n- the primary exchange’s official listing and trading data,\n- and regulatory filings associated with the public listing.\n###\nIf these sources conflict, exchange-published trading data will take precedence.\n\n## Additional Information\n### Ticker Symbol Determination\nThe market will resolve according to the primary ticker symbol assigned by the primary listing exchange to the qualifying security.\n###\nIf the ticker symbol used by SpaceX includes additional characters or suffixes solely to denote a specific class or series of shares (e.g. .A, .B, -A, or equivalent exchange-mandated class indicators), the market will resolve to the base ticker symbol without such suffixes.\n###\nSuffixes or extensions that are not class indicators (including but not limited to warrants, units, rights, regional identifiers, or temporary tickers) will not be stripped and will be considered distinct tickers.\n### Multiple Tickers or Share Classes\nIf SpaceX lists multiple equity classes under different tickers that are not considered the same ticker under the rule above, the market will remain open until the end of the company’s first trading day.\n###\nThe market will resolve to the ticker corresponding to the equity class with the greatest market capitalisation, calculated as:\n###\n> (Total issued and outstanding shares of that class as reported by the exchange or regulatory filings) × (official closing price on the first trading day)\n###\nIf trading is interrupted on the first trading day (including circuit breakers or abbreviated sessions), the official closing price of that session will be used. If no official closing price is published, the next trading day with an official closing price will be treated as the first trading day.\n###\nIf market capitalisations are equal, the market will resolve to the ticker that comes first in case-insensitive alphabetical order, using standard ASCII ordering.\n### Timing and Announcement\nA ticker symbol is considered valid only if it is:\n- publicly confirmed by SpaceX or the primary listing exchange, and\n- associated with an actual public listing that results in trading commencing.\n### \nAnnouncements of a ticker symbol that are later withdrawn, revised, or not followed by a qualifying public listing do not trigger resolution.\n### Resolution to \"Other\"\nThis market will resolve to “Other” if:\n- SpaceX does not complete a qualifying public listing by the resolution deadline, or\n- SpaceX completes a qualifying public listing using a ticker symbol not explicitly listed as an outcome in this market.",
+        "volume": 77317.99075358617,
+        "marketCap": 31199.521958433565,
+        "endDate": "2026-12-30T23:59:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "$STAR",
+            "index_outcome_from_zero": 0,
+            "symbol": "$STAR",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 2364.503384742153,
+            "price_hmr": 0.012101159368502526,
+            "payout_hmr": 0.09398697362288543
+          },
+          {
+            "token_id": 2,
+            "name": "$SPAX",
+            "index_outcome_from_zero": 1,
+            "symbol": "$SPAX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 364.761272542673,
+            "price_hmr": 0.005501146737646166,
+            "payout_hmr": 0.26889804288725394
+          },
+          {
+            "token_id": 4,
+            "name": "$X",
+            "index_outcome_from_zero": 2,
+            "symbol": "$X",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5191.289839565243,
+            "price_hmr": 0.015836955982618167,
+            "payout_hmr": 0.06565551131945413
+          },
+          {
+            "token_id": 8,
+            "name": "$SEX",
+            "index_outcome_from_zero": 3,
+            "symbol": "$SEX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 16,
+            "name": "$SX",
+            "index_outcome_from_zero": 4,
+            "symbol": "$SX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 32,
+            "name": "$MARS",
+            "index_outcome_from_zero": 5,
+            "symbol": "$MARS",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 391.51695193984017,
+            "price_hmr": 0.005491843559692676,
+            "payout_hmr": 0.269505611663013
+          },
+          {
+            "token_id": 64,
+            "name": "$SPACE",
+            "index_outcome_from_zero": 6,
+            "symbol": "$SPACE",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 15389.354871490885,
+            "price_hmr": 0.027277756779005197,
+            "payout_hmr": 0.031799313291903386
+          },
+          {
+            "token_id": 128,
+            "name": "$SPC",
+            "index_outcome_from_zero": 7,
+            "symbol": "$SPC",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 256,
+            "name": "$ELON",
+            "index_outcome_from_zero": 8,
+            "symbol": "$ELON",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 512,
+            "name": "Other",
+            "index_outcome_from_zero": 9,
+            "symbol": "Other",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 7478.06460819144,
+            "price_hmr": 0.018892733677675307,
+            "payout_hmr": 0.05189259166423483
+          }
+        ],
+        "category": "Finance",
+        "status": "live",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 5,
+        "elapsedPercent": "0.032620198827925204",
+        "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
+        "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "source": "42"
+      },
+      "score": 4,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Bitcoin Halving Anniversary",
+        "date": "2025-04-20",
+        "category": "Crypto",
+        "subcategory": "Bitcoin",
+        "description": "1 year since last Bitcoin halving",
+        "keywords": [
+          "bitcoin",
+          "halving",
+          "btc",
+          "crypto"
+        ]
+      },
+      "market": {
+        "id": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "contractAddress": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "question": "Backpack market cap (FDV) one day after TGE? [start: LAUNCH DAY]",
+        "description": "## Resolution Criteria\nThis market resolves to the bucket containing the Fully Diluted Valuation (FDV) of the official Backpack token 24 hours after its Token Generation Event (TGE). If the valuation falls exactly on a boundary, the resolution falls into the higher bucket.\n###\n**FDV Calculation Hierarchy:** \n1. Displayed FDV on the Primary Source. \n2. If unavailable, calculated as (Price × Max Supply). Max Supply is the hard cap defined in the smart contract/documentation. \n3. If unavailable, calculated as (Price × Total Supply). Total Supply is minted tokens minus burned tokens. \n###\n**Token Identification:** \n###\nMust be the official native utility or governance token of the Backpack ecosystem. If multiple tokens launch simultaneously (e.g., governance vs. utility), the market resolves based on the token with the higher FDV. If only one is tradeable on the Primary Source, that token is used. \n###\n**TGE Definition:**\n###\nThe first moment the token is available for public trading with **meaningful liquidity** (>$50,000 USD in a DEX pool or open order books on a CEX). Mere on-chain transferability does not count.\n\n## Resolution Sources\nPrimary Resolution Source: [CoinGecko](https://www.coingecko.com/)\n\nSecondary Resolution Source: [CoinMarketCap](https://coinmarketcap.com/)\n\n## Additional Information\n**Listing Delays:** \n*   If CoinGecko has not listed the token within 48 hours of TGE, CoinMarketCap becomes the Primary Source.\n*   If **neither** source has listed the token within 72 hours of TGE, resolution uses price data from the DEX/CEX with the highest verified volume combined with the Max Supply definition. \n\n**Data Discrepancies:** If FDV is ≤$0, or if the Primary Source differs from the Secondary Source by >500%, the Secondary Source is used.\n\n**TGE on Deadline:** If TGE occurs on December 31, 2026, settlement is delayed 24 hours to allow for resolution. If TGE has not occurred by December 31, 2026, at 11:59:59 PM UTC, the market resolves to \"No Token Launch\". \n\n**Airdrops:** Non-transferable points or locked tokens do not constitute a TGE; the token must be tradeable on a secondary market. \n\n**Initial Non-Transferability:** If a token is generated but remains non-transferable (locked) beyond December 31, 2026, it resolves to **\"No Token Launch\"**.\n\n**Currency:** All values are resolved in USD.",
+        "volume": 98532.2601235569,
+        "marketCap": 59384.15943347526,
+        "endDate": "2026-12-30T23:59:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "$500M_to_$750M",
+            "index_outcome_from_zero": 0,
+            "symbol": "$500M – $750M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 14.919501395969723,
+            "price_hmr": 0.001397936119939306,
+            "payout_hmr": 3.1810585162068485
+          },
+          {
+            "token_id": 2,
+            "name": "$750M_to_$1B",
+            "index_outcome_from_zero": 1,
+            "symbol": "$750M – $1B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 17584.429308125622,
+            "price_hmr": 0.02771712272236709,
+            "payout_hmr": 0.05924990743820732
+          },
+          {
+            "token_id": 4,
+            "name": "$1B_to_$1.25B",
+            "index_outcome_from_zero": 2,
+            "symbol": "$1B – $1.25B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 89.63706022235887,
+            "price_hmr": 0.002790699196367467,
+            "payout_hmr": 1.2651622296800002
+          },
+          {
+            "token_id": 8,
+            "name": "Below_$500M",
+            "index_outcome_from_zero": 3,
+            "symbol": "Below $500M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 10077.93504979699,
+            "price_hmr": 0.02275347424441661,
+            "payout_hmr": 0.07708254942484682
+          },
+          {
+            "token_id": 16,
+            "name": "$1.25B_to_$1.5B",
+            "index_outcome_from_zero": 4,
+            "symbol": "$1.25B – $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 11568.746841939157,
+            "price_hmr": 0.024136796422063202,
+            "payout_hmr": 0.07124917051278888
+          },
+          {
+            "token_id": 32,
+            "name": "Above_$1.5B",
+            "index_outcome_from_zero": 5,
+            "symbol": "Above $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 64,
+            "name": "No_Token_Launch",
+            "index_outcome_from_zero": 6,
+            "symbol": "No Token Launch",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 128,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 7,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 14.867816191097816,
+            "price_hmr": 0.00139585856634222,
+            "payout_hmr": 3.1873758823831864
+          },
+          {
+            "token_id": 256,
+            "name": "sohai",
+            "index_outcome_from_zero": 8,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 198.2496414191873,
+            "price_hmr": 0.004236128305377538,
+            "payout_hmr": 0.7251641876712072
+          }
+        ],
+        "category": "Crypto",
+        "status": "live",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 8,
+        "elapsedPercent": "0.03259275286402927",
+        "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
+        "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Ethereum Pectra Upgrade",
+        "date": "2025-03-01",
+        "category": "Crypto",
+        "subcategory": "Ethereum",
+        "description": "Major Ethereum network upgrade",
+        "keywords": [
+          "ethereum",
+          "pectra",
+          "eth",
+          "upgrade"
+        ]
+      },
+      "market": {
+        "id": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "contractAddress": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "question": "Backpack market cap (FDV) one day after TGE? [start: LAUNCH DAY]",
+        "description": "## Resolution Criteria\nThis market resolves to the bucket containing the Fully Diluted Valuation (FDV) of the official Backpack token 24 hours after its Token Generation Event (TGE). If the valuation falls exactly on a boundary, the resolution falls into the higher bucket.\n###\n**FDV Calculation Hierarchy:** \n1. Displayed FDV on the Primary Source. \n2. If unavailable, calculated as (Price × Max Supply). Max Supply is the hard cap defined in the smart contract/documentation. \n3. If unavailable, calculated as (Price × Total Supply). Total Supply is minted tokens minus burned tokens. \n###\n**Token Identification:** \n###\nMust be the official native utility or governance token of the Backpack ecosystem. If multiple tokens launch simultaneously (e.g., governance vs. utility), the market resolves based on the token with the higher FDV. If only one is tradeable on the Primary Source, that token is used. \n###\n**TGE Definition:**\n###\nThe first moment the token is available for public trading with **meaningful liquidity** (>$50,000 USD in a DEX pool or open order books on a CEX). Mere on-chain transferability does not count.\n\n## Resolution Sources\nPrimary Resolution Source: [CoinGecko](https://www.coingecko.com/)\n\nSecondary Resolution Source: [CoinMarketCap](https://coinmarketcap.com/)\n\n## Additional Information\n**Listing Delays:** \n*   If CoinGecko has not listed the token within 48 hours of TGE, CoinMarketCap becomes the Primary Source.\n*   If **neither** source has listed the token within 72 hours of TGE, resolution uses price data from the DEX/CEX with the highest verified volume combined with the Max Supply definition. \n\n**Data Discrepancies:** If FDV is ≤$0, or if the Primary Source differs from the Secondary Source by >500%, the Secondary Source is used.\n\n**TGE on Deadline:** If TGE occurs on December 31, 2026, settlement is delayed 24 hours to allow for resolution. If TGE has not occurred by December 31, 2026, at 11:59:59 PM UTC, the market resolves to \"No Token Launch\". \n\n**Airdrops:** Non-transferable points or locked tokens do not constitute a TGE; the token must be tradeable on a secondary market. \n\n**Initial Non-Transferability:** If a token is generated but remains non-transferable (locked) beyond December 31, 2026, it resolves to **\"No Token Launch\"**.\n\n**Currency:** All values are resolved in USD.",
+        "volume": 98532.2601235569,
+        "marketCap": 59384.15943347526,
+        "endDate": "2026-12-30T23:59:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "$500M_to_$750M",
+            "index_outcome_from_zero": 0,
+            "symbol": "$500M – $750M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 14.919501395969723,
+            "price_hmr": 0.001397936119939306,
+            "payout_hmr": 3.1810585162068485
+          },
+          {
+            "token_id": 2,
+            "name": "$750M_to_$1B",
+            "index_outcome_from_zero": 1,
+            "symbol": "$750M – $1B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 17584.429308125622,
+            "price_hmr": 0.02771712272236709,
+            "payout_hmr": 0.05924990743820732
+          },
+          {
+            "token_id": 4,
+            "name": "$1B_to_$1.25B",
+            "index_outcome_from_zero": 2,
+            "symbol": "$1B – $1.25B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 89.63706022235887,
+            "price_hmr": 0.002790699196367467,
+            "payout_hmr": 1.2651622296800002
+          },
+          {
+            "token_id": 8,
+            "name": "Below_$500M",
+            "index_outcome_from_zero": 3,
+            "symbol": "Below $500M",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 10077.93504979699,
+            "price_hmr": 0.02275347424441661,
+            "payout_hmr": 0.07708254942484682
+          },
+          {
+            "token_id": 16,
+            "name": "$1.25B_to_$1.5B",
+            "index_outcome_from_zero": 4,
+            "symbol": "$1.25B – $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 11568.746841939157,
+            "price_hmr": 0.024136796422063202,
+            "payout_hmr": 0.07124917051278888
+          },
+          {
+            "token_id": 32,
+            "name": "Above_$1.5B",
+            "index_outcome_from_zero": 5,
+            "symbol": "Above $1.5B",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 64,
+            "name": "No_Token_Launch",
+            "index_outcome_from_zero": 6,
+            "symbol": "No Token Launch",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 9917.687107192438,
+            "price_hmr": 0.022656707377968367,
+            "payout_hmr": 0.07752182643130444
+          },
+          {
+            "token_id": 128,
+            "name": "NOOOOOO",
+            "index_outcome_from_zero": 7,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 14.867816191097816,
+            "price_hmr": 0.00139585856634222,
+            "payout_hmr": 3.1873758823831864
+          },
+          {
+            "token_id": 256,
+            "name": "sohai",
+            "index_outcome_from_zero": 8,
+            "symbol": null,
+            "description": null,
+            "image": null,
+            "market_cap_hmr": 198.2496414191873,
+            "price_hmr": 0.004236128305377538,
+            "payout_hmr": 0.7251641876712072
+          }
+        ],
+        "category": "Crypto",
+        "status": "live",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 8,
+        "elapsedPercent": "0.03259275286402927",
+        "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
+        "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    },
+    {
+      "event": {
+        "name": "Artemis II Moon Mission",
+        "date": "2025-09-01",
+        "category": "Science",
+        "subcategory": "Space",
+        "description": "NASA crewed lunar flyby mission",
+        "keywords": [
+          "artemis",
+          "nasa",
+          "moon",
+          "space",
+          "astronaut"
+        ]
+      },
+      "market": {
+        "id": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "contractAddress": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "question": "What will SpaceX's public ticker be?",
+        "description": "## Resolution Criteria\nThis market resolves based on the ticker symbol used by Space Exploration Technologies Corp., or its ultimate parent entity, in its first public equity listing by December 31, 2026, 11:59 PM UTC.\n###\nA qualifying public listing is defined as any event that results in the company’s common equity becoming publicly tradeable on a recognized securities exchange, including but not limited to:\n- a traditional IPO,\n- a direct listing,\n- or a merger with a publicly traded shell or SPAC.\n###\nListings of subsidiaries, controlled affiliates, or spun-off entities (including but not limited to Starlink) do not qualify unless Space Exploration Technologies Corp. itself is the listed entity.\n\n## Resolution Source\nThe primary resolution sources will be:\n- official announcements from SpaceX,\n- the primary exchange’s official listing and trading data,\n- and regulatory filings associated with the public listing.\n###\nIf these sources conflict, exchange-published trading data will take precedence.\n\n## Additional Information\n### Ticker Symbol Determination\nThe market will resolve according to the primary ticker symbol assigned by the primary listing exchange to the qualifying security.\n###\nIf the ticker symbol used by SpaceX includes additional characters or suffixes solely to denote a specific class or series of shares (e.g. .A, .B, -A, or equivalent exchange-mandated class indicators), the market will resolve to the base ticker symbol without such suffixes.\n###\nSuffixes or extensions that are not class indicators (including but not limited to warrants, units, rights, regional identifiers, or temporary tickers) will not be stripped and will be considered distinct tickers.\n### Multiple Tickers or Share Classes\nIf SpaceX lists multiple equity classes under different tickers that are not considered the same ticker under the rule above, the market will remain open until the end of the company’s first trading day.\n###\nThe market will resolve to the ticker corresponding to the equity class with the greatest market capitalisation, calculated as:\n###\n> (Total issued and outstanding shares of that class as reported by the exchange or regulatory filings) × (official closing price on the first trading day)\n###\nIf trading is interrupted on the first trading day (including circuit breakers or abbreviated sessions), the official closing price of that session will be used. If no official closing price is published, the next trading day with an official closing price will be treated as the first trading day.\n###\nIf market capitalisations are equal, the market will resolve to the ticker that comes first in case-insensitive alphabetical order, using standard ASCII ordering.\n### Timing and Announcement\nA ticker symbol is considered valid only if it is:\n- publicly confirmed by SpaceX or the primary listing exchange, and\n- associated with an actual public listing that results in trading commencing.\n### \nAnnouncements of a ticker symbol that are later withdrawn, revised, or not followed by a qualifying public listing do not trigger resolution.\n### Resolution to \"Other\"\nThis market will resolve to “Other” if:\n- SpaceX does not complete a qualifying public listing by the resolution deadline, or\n- SpaceX completes a qualifying public listing using a ticker symbol not explicitly listed as an outcome in this market.",
+        "volume": 77317.99075358617,
+        "marketCap": 31199.521958433565,
+        "endDate": "2026-12-30T23:59:00+00:00",
+        "outcomes": [
+          {
+            "token_id": 1,
+            "name": "$STAR",
+            "index_outcome_from_zero": 0,
+            "symbol": "$STAR",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 2364.503384742153,
+            "price_hmr": 0.012101159368502526,
+            "payout_hmr": 0.09398697362288543
+          },
+          {
+            "token_id": 2,
+            "name": "$SPAX",
+            "index_outcome_from_zero": 1,
+            "symbol": "$SPAX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 364.761272542673,
+            "price_hmr": 0.005501146737646166,
+            "payout_hmr": 0.26889804288725394
+          },
+          {
+            "token_id": 4,
+            "name": "$X",
+            "index_outcome_from_zero": 2,
+            "symbol": "$X",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5191.289839565243,
+            "price_hmr": 0.015836955982618167,
+            "payout_hmr": 0.06565551131945413
+          },
+          {
+            "token_id": 8,
+            "name": "$SEX",
+            "index_outcome_from_zero": 3,
+            "symbol": "$SEX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 16,
+            "name": "$SX",
+            "index_outcome_from_zero": 4,
+            "symbol": "$SX",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 32,
+            "name": "$MARS",
+            "index_outcome_from_zero": 5,
+            "symbol": "$MARS",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 391.51695193984017,
+            "price_hmr": 0.005491843559692676,
+            "payout_hmr": 0.269505611663013
+          },
+          {
+            "token_id": 64,
+            "name": "$SPACE",
+            "index_outcome_from_zero": 6,
+            "symbol": "$SPACE",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 15389.354871490885,
+            "price_hmr": 0.027277756779005197,
+            "payout_hmr": 0.031799313291903386
+          },
+          {
+            "token_id": 128,
+            "name": "$SPC",
+            "index_outcome_from_zero": 7,
+            "symbol": "$SPC",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 256,
+            "name": "$ELON",
+            "index_outcome_from_zero": 8,
+            "symbol": "$ELON",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 5.007757490332745,
+            "price_hmr": 0.000875583268542512,
+            "payout_hmr": 3.1199521958433567
+          },
+          {
+            "token_id": 512,
+            "name": "Other",
+            "index_outcome_from_zero": 9,
+            "symbol": "Other",
+            "description": "",
+            "image": "",
+            "market_cap_hmr": 7478.06460819144,
+            "price_hmr": 0.018892733677675307,
+            "payout_hmr": 0.05189259166423483
+          }
+        ],
+        "category": "Finance",
+        "status": "live",
+        "resolved": false,
+        "resolvedAnswer": null,
+        "traders": 5,
+        "elapsedPercent": "0.032620198827925204",
+        "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
+        "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+        "source": "42"
+      },
+      "score": 3,
+      "matchType": "enhanced",
+      "platform": "42"
+    }
+  ],
+  "marketsByCategory": {},
+  "topPolymarkets": [],
+  "topFortyTwo": [
+    {
+      "id": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+      "contractAddress": "0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+      "question": "Backpack market cap (FDV) one day after TGE? [start: LAUNCH DAY]",
+      "description": "## Resolution Criteria\nThis market resolves to the bucket containing the Fully Diluted Valuation (FDV) of the official Backpack token 24 hours after its Token Generation Event (TGE). If the valuation falls exactly on a boundary, the resolution falls into the higher bucket.\n###\n**FDV Calculation Hierarchy:** \n1. Displayed FDV on the Primary Source. \n2. If unavailable, calculated as (Price × Max Supply). Max Supply is the hard cap defined in the smart contract/documentation. \n3. If unavailable, calculated as (Price × Total Supply). Total Supply is minted tokens minus burned tokens. \n###\n**Token Identification:** \n###\nMust be the official native utility or governance token of the Backpack ecosystem. If multiple tokens launch simultaneously (e.g., governance vs. utility), the market resolves based on the token with the higher FDV. If only one is tradeable on the Primary Source, that token is used. \n###\n**TGE Definition:**\n###\nThe first moment the token is available for public trading with **meaningful liquidity** (>$50,000 USD in a DEX pool or open order books on a CEX). Mere on-chain transferability does not count.\n\n## Resolution Sources\nPrimary Resolution Source: [CoinGecko](https://www.coingecko.com/)\n\nSecondary Resolution Source: [CoinMarketCap](https://coinmarketcap.com/)\n\n## Additional Information\n**Listing Delays:** \n*   If CoinGecko has not listed the token within 48 hours of TGE, CoinMarketCap becomes the Primary Source.\n*   If **neither** source has listed the token within 72 hours of TGE, resolution uses price data from the DEX/CEX with the highest verified volume combined with the Max Supply definition. \n\n**Data Discrepancies:** If FDV is ≤$0, or if the Primary Source differs from the Secondary Source by >500%, the Secondary Source is used.\n\n**TGE on Deadline:** If TGE occurs on December 31, 2026, settlement is delayed 24 hours to allow for resolution. If TGE has not occurred by December 31, 2026, at 11:59:59 PM UTC, the market resolves to \"No Token Launch\". \n\n**Airdrops:** Non-transferable points or locked tokens do not constitute a TGE; the token must be tradeable on a secondary market. \n\n**Initial Non-Transferability:** If a token is generated but remains non-transferable (locked) beyond December 31, 2026, it resolves to **\"No Token Launch\"**.\n\n**Currency:** All values are resolved in USD.",
+      "volume": 98532.2601235569,
+      "marketCap": 59384.15943347526,
+      "endDate": "2026-12-30T23:59:00+00:00",
+      "outcomes": [
+        {
+          "token_id": 1,
+          "name": "$500M_to_$750M",
+          "index_outcome_from_zero": 0,
+          "symbol": "$500M – $750M",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 14.919501395969723,
+          "price_hmr": 0.001397936119939306,
+          "payout_hmr": 3.1810585162068485
+        },
+        {
+          "token_id": 2,
+          "name": "$750M_to_$1B",
+          "index_outcome_from_zero": 1,
+          "symbol": "$750M – $1B",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 17584.429308125622,
+          "price_hmr": 0.02771712272236709,
+          "payout_hmr": 0.05924990743820732
+        },
+        {
+          "token_id": 4,
+          "name": "$1B_to_$1.25B",
+          "index_outcome_from_zero": 2,
+          "symbol": "$1B – $1.25B",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 89.63706022235887,
+          "price_hmr": 0.002790699196367467,
+          "payout_hmr": 1.2651622296800002
+        },
+        {
+          "token_id": 8,
+          "name": "Below_$500M",
+          "index_outcome_from_zero": 3,
+          "symbol": "Below $500M",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 10077.93504979699,
+          "price_hmr": 0.02275347424441661,
+          "payout_hmr": 0.07708254942484682
+        },
+        {
+          "token_id": 16,
+          "name": "$1.25B_to_$1.5B",
+          "index_outcome_from_zero": 4,
+          "symbol": "$1.25B – $1.5B",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 11568.746841939157,
+          "price_hmr": 0.024136796422063202,
+          "payout_hmr": 0.07124917051278888
+        },
+        {
+          "token_id": 32,
+          "name": "Above_$1.5B",
+          "index_outcome_from_zero": 5,
+          "symbol": "Above $1.5B",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 9917.687107192438,
+          "price_hmr": 0.022656707377968367,
+          "payout_hmr": 0.07752182643130444
+        },
+        {
+          "token_id": 64,
+          "name": "No_Token_Launch",
+          "index_outcome_from_zero": 6,
+          "symbol": "No Token Launch",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 9917.687107192438,
+          "price_hmr": 0.022656707377968367,
+          "payout_hmr": 0.07752182643130444
+        },
+        {
+          "token_id": 128,
+          "name": "NOOOOOO",
+          "index_outcome_from_zero": 7,
+          "symbol": null,
+          "description": null,
+          "image": null,
+          "market_cap_hmr": 14.867816191097816,
+          "price_hmr": 0.00139585856634222,
+          "payout_hmr": 3.1873758823831864
+        },
+        {
+          "token_id": 256,
+          "name": "sohai",
+          "index_outcome_from_zero": 8,
+          "symbol": null,
+          "description": null,
+          "image": null,
+          "market_cap_hmr": 198.2496414191873,
+          "price_hmr": 0.004236128305377538,
+          "payout_hmr": 0.7251641876712072
+        }
+      ],
+      "category": "Crypto",
+      "status": "live",
+      "resolved": false,
+      "resolvedAnswer": null,
+      "traders": 8,
+      "elapsedPercent": "0.03259275286402927",
+      "image": "https://assets.dev-api.42.space/img/1769574886460-2nvxc6c03u.png",
+      "url": "https://42.space/event/0xCcF0379a3177bc7CC2257e7c02318327EF2A61De",
+      "source": "42"
+    },
+    {
+      "id": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+      "contractAddress": "0xC092e082773CD827883E8F98abf6f9C9184d6154",
+      "question": "What will SpaceX's public ticker be?",
+      "description": "## Resolution Criteria\nThis market resolves based on the ticker symbol used by Space Exploration Technologies Corp., or its ultimate parent entity, in its first public equity listing by December 31, 2026, 11:59 PM UTC.\n###\nA qualifying public listing is defined as any event that results in the company’s common equity becoming publicly tradeable on a recognized securities exchange, including but not limited to:\n- a traditional IPO,\n- a direct listing,\n- or a merger with a publicly traded shell or SPAC.\n###\nListings of subsidiaries, controlled affiliates, or spun-off entities (including but not limited to Starlink) do not qualify unless Space Exploration Technologies Corp. itself is the listed entity.\n\n## Resolution Source\nThe primary resolution sources will be:\n- official announcements from SpaceX,\n- the primary exchange’s official listing and trading data,\n- and regulatory filings associated with the public listing.\n###\nIf these sources conflict, exchange-published trading data will take precedence.\n\n## Additional Information\n### Ticker Symbol Determination\nThe market will resolve according to the primary ticker symbol assigned by the primary listing exchange to the qualifying security.\n###\nIf the ticker symbol used by SpaceX includes additional characters or suffixes solely to denote a specific class or series of shares (e.g. .A, .B, -A, or equivalent exchange-mandated class indicators), the market will resolve to the base ticker symbol without such suffixes.\n###\nSuffixes or extensions that are not class indicators (including but not limited to warrants, units, rights, regional identifiers, or temporary tickers) will not be stripped and will be considered distinct tickers.\n### Multiple Tickers or Share Classes\nIf SpaceX lists multiple equity classes under different tickers that are not considered the same ticker under the rule above, the market will remain open until the end of the company’s first trading day.\n###\nThe market will resolve to the ticker corresponding to the equity class with the greatest market capitalisation, calculated as:\n###\n> (Total issued and outstanding shares of that class as reported by the exchange or regulatory filings) × (official closing price on the first trading day)\n###\nIf trading is interrupted on the first trading day (including circuit breakers or abbreviated sessions), the official closing price of that session will be used. If no official closing price is published, the next trading day with an official closing price will be treated as the first trading day.\n###\nIf market capitalisations are equal, the market will resolve to the ticker that comes first in case-insensitive alphabetical order, using standard ASCII ordering.\n### Timing and Announcement\nA ticker symbol is considered valid only if it is:\n- publicly confirmed by SpaceX or the primary listing exchange, and\n- associated with an actual public listing that results in trading commencing.\n### \nAnnouncements of a ticker symbol that are later withdrawn, revised, or not followed by a qualifying public listing do not trigger resolution.\n### Resolution to \"Other\"\nThis market will resolve to “Other” if:\n- SpaceX does not complete a qualifying public listing by the resolution deadline, or\n- SpaceX completes a qualifying public listing using a ticker symbol not explicitly listed as an outcome in this market.",
+      "volume": 77317.99075358617,
+      "marketCap": 31199.521958433565,
+      "endDate": "2026-12-30T23:59:00+00:00",
+      "outcomes": [
+        {
+          "token_id": 1,
+          "name": "$STAR",
+          "index_outcome_from_zero": 0,
+          "symbol": "$STAR",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 2364.503384742153,
+          "price_hmr": 0.012101159368502526,
+          "payout_hmr": 0.09398697362288543
+        },
+        {
+          "token_id": 2,
+          "name": "$SPAX",
+          "index_outcome_from_zero": 1,
+          "symbol": "$SPAX",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 364.761272542673,
+          "price_hmr": 0.005501146737646166,
+          "payout_hmr": 0.26889804288725394
+        },
+        {
+          "token_id": 4,
+          "name": "$X",
+          "index_outcome_from_zero": 2,
+          "symbol": "$X",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5191.289839565243,
+          "price_hmr": 0.015836955982618167,
+          "payout_hmr": 0.06565551131945413
+        },
+        {
+          "token_id": 8,
+          "name": "$SEX",
+          "index_outcome_from_zero": 3,
+          "symbol": "$SEX",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5.007757490332745,
+          "price_hmr": 0.000875583268542512,
+          "payout_hmr": 3.1199521958433567
+        },
+        {
+          "token_id": 16,
+          "name": "$SX",
+          "index_outcome_from_zero": 4,
+          "symbol": "$SX",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5.007757490332745,
+          "price_hmr": 0.000875583268542512,
+          "payout_hmr": 3.1199521958433567
+        },
+        {
+          "token_id": 32,
+          "name": "$MARS",
+          "index_outcome_from_zero": 5,
+          "symbol": "$MARS",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 391.51695193984017,
+          "price_hmr": 0.005491843559692676,
+          "payout_hmr": 0.269505611663013
+        },
+        {
+          "token_id": 64,
+          "name": "$SPACE",
+          "index_outcome_from_zero": 6,
+          "symbol": "$SPACE",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 15389.354871490885,
+          "price_hmr": 0.027277756779005197,
+          "payout_hmr": 0.031799313291903386
+        },
+        {
+          "token_id": 128,
+          "name": "$SPC",
+          "index_outcome_from_zero": 7,
+          "symbol": "$SPC",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5.007757490332745,
+          "price_hmr": 0.000875583268542512,
+          "payout_hmr": 3.1199521958433567
+        },
+        {
+          "token_id": 256,
+          "name": "$ELON",
+          "index_outcome_from_zero": 8,
+          "symbol": "$ELON",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 5.007757490332745,
+          "price_hmr": 0.000875583268542512,
+          "payout_hmr": 3.1199521958433567
+        },
+        {
+          "token_id": 512,
+          "name": "Other",
+          "index_outcome_from_zero": 9,
+          "symbol": "Other",
+          "description": "",
+          "image": "",
+          "market_cap_hmr": 7478.06460819144,
+          "price_hmr": 0.018892733677675307,
+          "payout_hmr": 0.05189259166423483
+        }
+      ],
+      "category": "Finance",
+      "status": "live",
+      "resolved": false,
+      "resolvedAnswer": null,
+      "traders": 5,
+      "elapsedPercent": "0.032620198827925204",
+      "image": "https://assets.dev-api.42.space/img/1767680460245-mj1db6c037.png",
+      "url": "https://42.space/event/0xC092e082773CD827883E8F98abf6f9C9184d6154",
+      "source": "42"
+    }
+  ],
+  "majorEvents": [
+    {
+      "name": "Virginia Gubernatorial Election",
+      "date": "2025-11-04",
+      "category": "Politics",
+      "subcategory": "US Elections",
+      "description": "Virginia elects a new governor",
+      "keywords": [
+        "virginia",
+        "governor",
+        "election",
+        "glenn youngkin"
+      ]
+    },
+    {
+      "name": "UK Local Elections",
+      "date": "2025-05-01",
+      "category": "Politics",
+      "subcategory": "UK Elections",
+      "description": "Local council elections across the UK",
+      "keywords": [
+        "uk",
+        "local elections",
+        "council",
+        "labour",
+        "conservative"
+      ]
+    },
+    {
+      "name": "German Federal Election",
+      "date": "2025-09-28",
+      "category": "Politics",
+      "subcategory": "European Elections",
+      "description": "Germany elects new Bundestag",
+      "keywords": [
+        "germany",
+        "bundestag",
+        "election",
+        "scholz",
+        "cdu"
+      ]
+    },
+    {
+      "name": "Fed Rate Decision - Q1",
+      "date": "2025-03-19",
+      "category": "Economics",
+      "subcategory": "Central Banks",
+      "description": "Federal Reserve interest rate decision",
+      "keywords": [
+        "fed",
+        "interest rate",
+        "fomc",
+        "powell",
+        "inflation"
+      ]
+    },
+    {
+      "name": "Bitcoin Halving Anniversary",
+      "date": "2025-04-20",
+      "category": "Crypto",
+      "subcategory": "Bitcoin",
+      "description": "1 year since last Bitcoin halving",
+      "keywords": [
+        "bitcoin",
+        "halving",
+        "btc",
+        "crypto"
+      ]
+    },
+    {
+      "name": "Ethereum Pectra Upgrade",
+      "date": "2025-03-01",
+      "category": "Crypto",
+      "subcategory": "Ethereum",
+      "description": "Major Ethereum network upgrade",
+      "keywords": [
+        "ethereum",
+        "pectra",
+        "eth",
+        "upgrade"
+      ]
+    },
+    {
+      "name": "Super Bowl LIX",
+      "date": "2025-02-09",
+      "category": "Sports",
+      "subcategory": "NFL",
+      "description": "NFL Championship game in New Orleans",
+      "keywords": [
+        "super bowl",
+        "nfl",
+        "football",
+        "championship"
+      ]
+    },
+    {
+      "name": "NBA Finals Start",
+      "date": "2025-06-05",
+      "category": "Sports",
+      "subcategory": "NBA",
+      "description": "NBA Championship series begins",
+      "keywords": [
+        "nba",
+        "finals",
+        "basketball",
+        "championship"
+      ]
+    },
+    {
+      "name": "Wimbledon Championships",
+      "date": "2025-06-30",
+      "category": "Sports",
+      "subcategory": "Tennis",
+      "description": "Tennis Grand Slam at All England Club",
+      "keywords": [
+        "wimbledon",
+        "tennis",
+        "grand slam"
+      ]
+    },
+    {
+      "name": "FIFA Club World Cup",
+      "date": "2025-06-15",
+      "category": "Sports",
+      "subcategory": "Soccer",
+      "description": "Expanded 32-team tournament in USA",
+      "keywords": [
+        "fifa",
+        "club world cup",
+        "soccer",
+        "football"
+      ]
+    },
+    {
+      "name": "Apple WWDC 2025",
+      "date": "2025-06-02",
+      "category": "Technology",
+      "subcategory": "Apple",
+      "description": "Apple Developer Conference - iOS 19, new products",
+      "keywords": [
+        "apple",
+        "wwdc",
+        "ios",
+        "iphone",
+        "developer"
+      ]
+    },
+    {
+      "name": "Google I/O 2025",
+      "date": "2025-05-14",
+      "category": "Technology",
+      "subcategory": "Google",
+      "description": "Google Developer Conference - Android 16, AI updates",
+      "keywords": [
+        "google",
+        "io",
+        "android",
+        "ai",
+        "developer"
+      ]
+    },
+    {
+      "name": "Microsoft Build 2025",
+      "date": "2025-05-19",
+      "category": "Technology",
+      "subcategory": "Microsoft",
+      "description": "Microsoft Developer Conference",
+      "keywords": [
+        "microsoft",
+        "build",
+        "azure",
+        "windows",
+        "developer"
+      ]
+    },
+    {
+      "name": "GPT-5 Release Window",
+      "date": "2025-06-01",
+      "category": "Technology",
+      "subcategory": "AI",
+      "description": "Expected GPT-5 release timeframe",
+      "keywords": [
+        "gpt5",
+        "openai",
+        "chatgpt",
+        "ai",
+        "llm"
+      ]
+    },
+    {
+      "name": "Academy Awards (Oscars)",
+      "date": "2025-03-02",
+      "category": "Entertainment",
+      "subcategory": "Awards",
+      "description": "97th Academy Awards ceremony",
+      "keywords": [
+        "oscars",
+        "academy awards",
+        "movies",
+        "hollywood"
+      ]
+    },
+    {
+      "name": "Cannes Film Festival",
+      "date": "2025-05-13",
+      "category": "Entertainment",
+      "subcategory": "Film",
+      "description": "78th Cannes Film Festival",
+      "keywords": [
+        "cannes",
+        "film festival",
+        "movies",
+        "cinema"
+      ]
+    },
+    {
+      "name": "E3 Gaming Expo",
+      "date": "2025-06-10",
+      "category": "Entertainment",
+      "subcategory": "Gaming",
+      "description": "Electronic Entertainment Expo",
+      "keywords": [
+        "e3",
+        "gaming",
+        "xbox",
+        "playstation",
+        "nintendo"
+      ]
+    },
+    {
+      "name": "Artemis II Moon Mission",
+      "date": "2025-09-01",
+      "category": "Science",
+      "subcategory": "Space",
+      "description": "NASA crewed lunar flyby mission",
+      "keywords": [
+        "artemis",
+        "nasa",
+        "moon",
+        "space",
+        "astronaut"
+      ]
+    },
+    {
+      "name": "Total Solar Eclipse - Europe",
+      "date": "2025-08-12",
+      "category": "Science",
+      "subcategory": "Astronomy",
+      "description": "Total solar eclipse visible in parts of Europe",
+      "keywords": [
+        "solar eclipse",
+        "astronomy",
+        "europe"
+      ]
+    }
+  ]
+}
