@@ -116,9 +116,13 @@ export async function fetch42Markets() {
           traders: m.traders || 0,
           elapsedPercent: m.elapsed_pct || 0,
           image: m.image,
-          // Note: 42.space requires desktop browser for full experience
+          // Note: 42.space URL structure doesn't match API addresses
+          // The API returns market_address but URLs use a different identifier
+          // Users should search for the market title on 42.space directly
           url: `https://www.42.space/event/${m.market_address}`,
+          searchUrl: `https://www.42.space/search?q=${encodeURIComponent(m.title)}`,
           desktopOnly: true,
+          urlNote: 'URL may not work - search for the market title on 42.space',
           source: '42'
         };
       });

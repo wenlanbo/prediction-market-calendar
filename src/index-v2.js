@@ -312,8 +312,23 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                             </div>
                         ` : ''}
                         <div style="margin-top: 10px;">
-                            <a href="${match.market.url}" target="_blank" class="link-button">View Market →</a>
-                            ${match.market.desktopOnly ? '<span style="font-size: 0.8em; color: #999; margin-left: 10px">(42.space requires desktop browser)</span>' : ''}
+                            ${match.market.source === '42' ? `
+                                <div style="background: #444; padding: 10px; border-radius: 4px; margin-top: 5px;">
+                                    <strong style="color: #10B981">42.space Market</strong><br>
+                                    <span style="font-size: 0.85em; color: #ccc">Contract: ${match.market.contractAddress}</span><br>
+                                    <div style="margin-top: 8px;">
+                                        <a href="https://www.42.space" target="_blank" class="link-button" style="background: #10B981">
+                                            Go to 42.space & Search →
+                                        </a>
+                                    </div>
+                                    <div style="font-size: 0.8em; color: #999; margin-top: 5px">
+                                        Search for: "${match.market.question.substring(0, 40)}..."<br>
+                                        Note: 42.space API addresses don't match URL structure
+                                    </div>
+                                </div>
+                            ` : `
+                                <a href="${match.market.url}" target="_blank" class="link-button">View Market →</a>
+                            `}
                     </div>
                 </div>
             `).join('')}
@@ -331,7 +346,10 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                                 <div style="margin-top: 10px; color: #999; font-size: 0.9em;">
                                     Volume: $${Math.round(market.volume || 0).toLocaleString()}
                                 </div>
-                                <a href="${market.url}" target="_blank" style="color: #7c3aed; font-size: 0.9em;">View →</a>
+                                ${market.source === '42' 
+                                    ? '<span style="color: #10B981; font-size: 0.9em;">42.space</span>'
+                                    : `<a href="${market.url}" target="_blank" style="color: #7c3aed; font-size: 0.9em;">View →</a>`
+                                }
                             </div>
                         `).join('')}
                     </div>
