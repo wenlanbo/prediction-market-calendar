@@ -1,13 +1,15 @@
 # Prediction Market Calendar 📊📅
 
-A tool that aggregates major events and trending topics, then maps them to active prediction markets on platforms like Polymarket and 42.
+A comprehensive tool that aggregates major events and trending topics, then intelligently maps them to active prediction markets on platforms like Polymarket and 42.space.
 
 ## Features
 
-- **Event Discovery**: Fetches trending topics from Twitter/X and tracks major upcoming events
-- **Market Mapping**: Automatically matches events to relevant prediction markets
-- **Dual Output**: Generates both HTML for web viewing and Markdown for AI agents
-- **Real-time Data**: Pulls live market data including volume, liquidity, and odds
+- **Multi-Platform Support**: Integrates both Polymarket and 42.space markets
+- **Comprehensive Event Database**: 2025 major events across politics, sports, tech, crypto, and more
+- **Smart Matching Algorithm**: AI-powered relevance scoring between events and markets
+- **Multiple Output Formats**: HTML (web), Markdown (agents), and JSON (API)
+- **Real-time Data**: Live market data including volume, liquidity, odds, and trader counts
+- **Automatic Updates**: Hourly basic updates + daily comprehensive refreshes
 
 ## Quick Start
 
@@ -15,11 +17,20 @@ A tool that aggregates major events and trending topics, then maps them to activ
 # Install dependencies
 npm install
 
-# Run the calendar generator
+# Run the server
 npm start
 
-# Output will be in output/calendar.html and output/calendar.md
+# Visit http://localhost:3000 for the comprehensive calendar
 ```
+
+## API Endpoints
+
+- `/` - Comprehensive calendar view (default)
+- `/calendar.html` - Basic calendar view
+- `/comprehensive` - Comprehensive calendar with all features
+- `/calendar-comprehensive.md` - Agent-readable format
+- `/api/refresh` - Trigger manual update
+- `/api/data` - Raw JSON data for integrations
 
 ## Project Structure
 
@@ -36,16 +47,18 @@ npm start
 
 ## API Integrations
 
-Currently supports:
-- Polymarket (via CLOB API)
-- Twitter/X trends (via xapi)
-- Manual event entries
+### Active Integrations:
+- **Polymarket**: Multiple endpoints (CLOB, Gamma, Strapi) for comprehensive data
+- **42.space**: GraphQL API for all active markets with volume, traders, and outcomes
+- **Major Events**: Curated database of 2025 significant events
+- **Twitter/X trends**: Via bird CLI (when available)
 
-Future integrations:
-- 42 prediction market database
-- News APIs for automatic event detection
-- Sports calendars
-- Economic calendars
+### Data Sources:
+- Politics: Elections, policy decisions, political events
+- Sports: Super Bowl, NBA Finals, World Cup, Olympics
+- Crypto: Bitcoin halving anniversary, Ethereum upgrades, token launches
+- Technology: Apple WWDC, Google I/O, AI model releases
+- Economics: Fed decisions, recession indicators
 
 ## Development
 
