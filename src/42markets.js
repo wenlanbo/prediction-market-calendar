@@ -116,7 +116,9 @@ export async function fetch42Markets() {
           traders: m.traders || 0,
           elapsedPercent: m.elapsed_pct || 0,
           image: m.image,
+          // Note: 42.space requires desktop browser for full experience
           url: `https://www.42.space/event/${m.market_address}`,
+          desktopOnly: true,
           source: '42'
         };
       });

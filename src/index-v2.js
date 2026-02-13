@@ -294,10 +294,26 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                         <strong style="color: #7c3aed">Matched Market:</strong> ${match.market.question}
                         <div class="market-stats">
                             ${match.market.volume ? `<div class="market-stat"><strong>Volume:</strong> $${Math.round(match.market.volume).toLocaleString()}</div>` : ''}
+                            ${match.market.marketCap ? `<div class="market-stat"><strong>Market Cap:</strong> $${Math.round(match.market.marketCap).toLocaleString()}</div>` : ''}
                             ${match.market.traders ? `<div class="market-stat"><strong>Traders:</strong> ${match.market.traders.toLocaleString()}</div>` : ''}
                             ${match.market.endDate ? `<div class="market-stat"><strong>Ends:</strong> ${new Date(match.market.endDate).toLocaleDateString()}</div>` : ''}
+                            ${match.market.status ? `<div class="market-stat"><strong>Status:</strong> ${match.market.status}</div>` : ''}
                         </div>
-                        <a href="${match.market.url}" target="_blank" class="link-button" style="margin-top: 10px">View Market →</a>
+                        ${match.market.outcomes && match.market.outcomes.length > 0 ? `
+                            <div style="margin-top: 10px;">
+                                <strong>Outcomes:</strong>
+                                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 5px;">
+                                    ${match.market.outcomes.slice(0, 6).map(o => `
+                                        <span style="background: #333; padding: 4px 8px; border-radius: 4px; font-size: 0.85em;">
+                                            ${o.symbol || o.name} ${o.price_hmr ? `(${(o.price_hmr * 100).toFixed(1)}%)` : ''}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                        <div style="margin-top: 10px;">
+                            <a href="${match.market.url}" target="_blank" class="link-button">View Market →</a>
+                            ${match.market.desktopOnly ? '<span style="font-size: 0.8em; color: #999; margin-left: 10px">(42.space requires desktop browser)</span>' : ''}
                     </div>
                 </div>
             `).join('')}
