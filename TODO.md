@@ -7,11 +7,12 @@
 - **Example**: 
   - API returns: `0xCcF0379a3177bc7CC2257e7c02318327EF2A61De`
   - Working URL uses: `0x0842630d678d74B7E7Bb6C14091a85836229A048`
+- **Confirmed**: URL address does NOT exist anywhere in their API (comprehensively searched all tables)
 - **Potential Solutions**:
   1. Contact 42.space team to understand URL structure
-  2. Check if there's a different API endpoint that provides correct URLs
+  2. Ask them to add a `url_id` or `slug` field to their API
   3. Scrape 42.space website to build a mapping table
-  4. Look for event_id or other fields that might map correctly
+  4. Use their search functionality as a workaround
 
 ### Other Improvements
 - Add more event sources (news APIs, sports calendars)
