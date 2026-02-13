@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: prediction_calendar
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  hasura:
+    image: hasura/graphql-engine:v2.36.0
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/prediction_calendar
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
+      HASURA_GRAPHQL_DEV_MODE: "true"
+      HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_ADMIN_SECRET:-myadminsecretkey}
+      HASURA_GRAPHQL_JWT_SECRET: |
+        {
+          "type": "HS256",
+          "key": "${JWT_SECRET:-your-super-secret-key-min-32-characters-long}"
+        }
+      HASURA_GRAPHQL_UNAUTHORIZED_ROLE: anonymous
+      ACTION_BASE_URL: http://app:4000
+      EVENT_WEBHOOK_URL: http://app:4000/api
+
+  app:
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+      - hasura
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/prediction_calendar
+      HASURA_GRAPHQL_ENDPOINT: http://hasura:8080/v1/graphql
+      HASURA_ADMIN_SECRET: ${HASURA_ADMIN_SECRET:-myadminsecretkey}
+      HASURA_WEBHOOK_SECRET: ${HASURA_WEBHOOK_SECRET:-mywebhooksecret}
+      JWT_SECRET: ${JWT_SECRET:-your-super-secret-key-min-32-characters-long}
+      PORT: 4000
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    command: npm run dev
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:

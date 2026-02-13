@@ -1,0 +1,329 @@
+version: 3
+metadata:
+  databases:
+  - name: default
+    kind: postgres
+    configuration:
+      connection_info:
+        database_url:
+          from_env: DATABASE_URL
+        isolation_level: read-committed
+        use_prepared_statements: false
+    tables:
+    
+    # Category table
+    - table:
+        schema: public
+        name: category
+      object_relationships:
+      - name: subcategories
+        using:
+          foreign_key_constraint_on:
+            column: category_id
+            table:
+              schema: public
+              name: subcategory
+      - name: event_categories
+        using:
+          foreign_key_constraint_on:
+            column: category_id
+            table:
+              schema: public
+              name: event_category
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: [id, name, slug, description, color, icon, display_order]
+          filter:
+            is_active:
+              _eq: true
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+
+    # Event table - main table
+    - table:
+        schema: public
+        name: event
+      object_relationships:
+      - name: source
+        using:
+          foreign_key_constraint_on: source_id
+      - name: metadata
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: event_metadata
+      array_relationships:
+      - name: outcomes
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: outcome
+      - name: categories
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: event_category
+      - name: subcategories
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: event_subcategory
+      - name: topics
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: event_topic
+      - name: tags
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: event_tag
+      - name: price_history
+        using:
+          foreign_key_constraint_on:
+            column: event_id
+            table:
+              schema: public
+              name: price_history
+      computed_fields:
+      - name: days_until_end
+        definition:
+          function:
+            schema: public
+            name: event_days_until_end
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: "*"
+          filter:
+            status:
+              _in: [active, resolved]
+          allow_aggregations: true
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+          allow_aggregations: true
+
+    # Event metadata table
+    - table:
+        schema: public
+        name: event_metadata
+      object_relationships:
+      - name: event
+        using:
+          foreign_key_constraint_on: event_id
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: "*"
+          filter: {}
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+
+    # Outcome table
+    - table:
+        schema: public
+        name: outcome
+      object_relationships:
+      - name: event
+        using:
+          foreign_key_constraint_on: event_id
+      - name: metadata
+        using:
+          foreign_key_constraint_on:
+            column: outcome_id
+            table:
+              schema: public
+              name: outcome_metadata
+      array_relationships:
+      - name: price_history
+        using:
+          foreign_key_constraint_on:
+            column: outcome_id
+            table:
+              schema: public
+              name: price_history
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: "*"
+          filter: {}
+          allow_aggregations: true
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+          allow_aggregations: true
+
+    # Price history table
+    - table:
+        schema: public
+        name: price_history
+      object_relationships:
+      - name: event
+        using:
+          foreign_key_constraint_on: event_id
+      - name: outcome
+        using:
+          foreign_key_constraint_on: outcome_id
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: "*"
+          filter: {}
+          allow_aggregations: true
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+          allow_aggregations: true
+
+    # Event source table
+    - table:
+        schema: public
+        name: event_source
+      array_relationships:
+      - name: events
+        using:
+          foreign_key_constraint_on:
+            column: source_id
+            table:
+              schema: public
+              name: event
+      - name: sync_logs
+        using:
+          foreign_key_constraint_on:
+            column: source_id
+            table:
+              schema: public
+              name: sync_log
+      select_permissions:
+      - role: anonymous
+        permission:
+          columns: [id, name, slug, api_type]
+          filter:
+            is_active:
+              _eq: true
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+
+    # Sync log table
+    - table:
+        schema: public
+        name: sync_log
+      object_relationships:
+      - name: source
+        using:
+          foreign_key_constraint_on: source_id
+      select_permissions:
+      - role: user
+        permission:
+          columns: "*"
+          filter: {}
+
+  # Custom functions
+  custom_types:
+    objects:
+    - name: EventFilterInput
+      fields:
+      - name: category_ids
+        type: "[Int!]"
+      - name: tag_ids
+        type: "[Int!]"
+      - name: min_volume
+        type: "numeric"
+      - name: min_probability
+        type: "numeric"
+      - name: max_probability
+        type: "numeric"
+      - name: ending_before
+        type: "timestamptz"
+      - name: ending_after
+        type: "timestamptz"
+    
+  actions:
+  - name: syncEventSource
+    definition:
+      kind: synchronous
+      handler: "{{ACTION_BASE_URL}}/api/actions/sync-source"
+      timeout: 120
+    permissions:
+    - role: admin
+    - role: operator
+
+  event_triggers:
+  - name: event_probability_change
+    definition:
+      enable_manual: true
+      update:
+        columns:
+        - probability
+    retry_conf:
+      num_retries: 0
+      interval_sec: 10
+      timeout_sec: 60
+    webhook: "{{EVENT_WEBHOOK_URL}}/webhooks/hasura"
+    headers:
+    - name: x-hasura-webhook-secret
+      value_from_env: HASURA_WEBHOOK_SECRET
+    table:
+      schema: public
+      name: event
+
+  - name: new_high_volume_event
+    definition:
+      enable_manual: true
+      insert:
+    retry_conf:
+      num_retries: 0
+    webhook: "{{EVENT_WEBHOOK_URL}}/webhooks/hasura"
+    headers:
+    - name: x-hasura-webhook-secret
+      value_from_env: HASURA_WEBHOOK_SECRET
+    table:
+      schema: public
+      name: event
+    insert:
+      columns: "*"
+
+  cron_triggers:
+  - name: sync_all_sources
+    webhook: "{{EVENT_WEBHOOK_URL}}/webhooks/hasura"
+    schedule: "0 */2 * * *"  # Every 2 hours
+    include_in_metadata: true
+    payload:
+      type: sync_all_sources
+    headers:
+    - name: x-hasura-webhook-secret
+      value_from_env: HASURA_WEBHOOK_SECRET
+
+  - name: cleanup_old_price_history
+    webhook: "{{EVENT_WEBHOOK_URL}}/webhooks/hasura"
+    schedule: "0 3 * * *"  # Daily at 3 AM
+    include_in_metadata: true
+    payload:
+      type: cleanup_price_history
+      days_to_keep: 30
+    headers:
+    - name: x-hasura-webhook-secret
+      value_from_env: HASURA_WEBHOOK_SECRET

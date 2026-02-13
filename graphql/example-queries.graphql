@@ -1,0 +1,351 @@
+# Example GraphQL Queries for Prediction Market Calendar
+
+# 1. Get upcoming events with full details
+query GetUpcomingEvents($limit: Int = 20, $offset: Int = 0) {
+  event(
+    where: {
+      status: { _eq: "active" }
+      end_date: { _gt: "now()" }
+    }
+    order_by: { end_date: asc }
+    limit: $limit
+    offset: $offset
+  ) {
+    id
+    title
+    slug
+    description
+    end_date
+    probability
+    volume
+    liquidity
+    trader_count
+    source_url
+    
+    # Metadata
+    metadata {
+      image_url
+      resolution_criteria
+    }
+    
+    # Source info
+    source {
+      name
+      api_type
+    }
+    
+    # Categories & Tags
+    categories {
+      category {
+        name
+        color
+        icon
+      }
+      is_primary
+    }
+    
+    tags {
+      tag {
+        name
+        color
+      }
+    }
+    
+    # Outcomes
+    outcomes(order_by: { display_order: asc }) {
+      name
+      probability
+      metadata {
+        symbol
+        color
+      }
+    }
+  }
+  
+  # Aggregate count
+  event_aggregate(where: { status: { _eq: "active" }, end_date: { _gt: "now()" } }) {
+    aggregate {
+      count
+    }
+  }
+}
+
+# 2. Get high-volume events
+query GetHighVolumeEvents($minVolume: numeric = 100000) {
+  event(
+    where: {
+      status: { _eq: "active" }
+      volume: { _gt: $minVolume }
+    }
+    order_by: { volume: desc }
+    limit: 10
+  ) {
+    id
+    title
+    volume
+    probability
+    liquidity
+    end_date
+    categories {
+      category {
+        name
+      }
+    }
+  }
+}
+
+# 3. Get events by category with subcategories
+query GetEventsByCategory($categorySlug: String!) {
+  category(where: { slug: { _eq: $categorySlug } }) {
+    name
+    description
+    color
+    icon
+    
+    subcategories(where: { is_active: { _eq: true } }) {
+      name
+      slug
+      
+      # Events in this subcategory
+      _event_subcategories_aggregate: event_subcategories_aggregate(
+        where: { event: { status: { _eq: "active" } } }
+      ) {
+        aggregate {
+          count
+        }
+      }
+    }
+    
+    # Direct events in this category
+    event_categories(
+      where: { event: { status: { _eq: "active" } } }
+      order_by: { event: { volume: desc } }
+      limit: 20
+    ) {
+      event {
+        id
+        title
+        probability
+        volume
+        end_date
+      }
+    }
+  }
+}
+
+# 4. Search events with full-text search
+query SearchEvents($searchTerm: String!) {
+  event(
+    where: {
+      _or: [
+        { title: { _ilike: $searchTerm } }
+        { description: { _ilike: $searchTerm } }
+        { search_vector: { _match: $searchTerm } }
+      ]
+      status: { _eq: "active" }
+    }
+    limit: 20
+  ) {
+    id
+    title
+    description
+    probability
+    volume
+    end_date
+    
+    # Highlight matching text
+    _search_rank: search_vector
+  }
+}
+
+# 5. Get event with price history
+query GetEventWithPriceHistory($eventId: uuid!) {
+  event_by_pk(id: $eventId) {
+    id
+    title
+    description
+    probability
+    volume
+    liquidity
+    end_date
+    
+    # Price history for charting
+    price_history(
+      order_by: { timestamp: desc }
+      limit: 168  # 7 days of hourly data
+    ) {
+      timestamp
+      price
+      volume_24h
+    }
+    
+    # Outcomes with their history
+    outcomes {
+      name
+      probability
+      
+      price_history(
+        order_by: { timestamp: desc }
+        limit: 168
+      ) {
+        timestamp
+        price
+      }
+    }
+  }
+}
+
+# 6. Get trending events (high recent activity)
+query GetTrendingEvents {
+  event(
+    where: {
+      status: { _eq: "active" }
+      updated_at: { _gt: "now() - interval '24 hours'" }
+    }
+    order_by: [
+      { volume: desc }
+      { trader_count: desc }
+    ]
+    limit: 10
+  ) {
+    id
+    title
+    probability
+    volume
+    
+    # Recent price changes
+    _recent_price_change: price_history_aggregate(
+      where: { timestamp: { _gt: "now() - interval '24 hours'" } }
+    ) {
+      aggregate {
+        max { price }
+        min { price }
+        avg { price }
+      }
+    }
+  }
+}
+
+# 7. Calendar view - events grouped by date
+query GetCalendarEvents($startDate: timestamptz!, $endDate: timestamptz!) {
+  event(
+    where: {
+      status: { _eq: "active" }
+      end_date: { _gte: $startDate, _lte: $endDate }
+    }
+    order_by: { end_date: asc }
+  ) {
+    id
+    title
+    slug
+    end_date
+    probability
+    volume
+    
+    categories {
+      category {
+        name
+        color
+      }
+    }
+    
+    metadata {
+      image_url
+    }
+  }
+}
+
+# 8. Get events ending soon with high uncertainty
+query GetCloseCallEvents {
+  event(
+    where: {
+      status: { _eq: "active" }
+      end_date: { 
+        _gt: "now()"
+        _lt: "now() + interval '7 days'" 
+      }
+      probability: { _gte: 0.3, _lte: 0.7 }
+    }
+    order_by: { end_date: asc }
+  ) {
+    id
+    title
+    probability
+    volume
+    end_date
+    days_until_end
+  }
+}
+
+# 9. Subscription for real-time updates
+subscription WatchEventUpdates($eventIds: [uuid!]!) {
+  event(
+    where: { id: { _in: $eventIds } }
+  ) {
+    id
+    probability
+    volume
+    updated_at
+    
+    outcomes {
+      name
+      probability
+    }
+  }
+}
+
+# 10. Admin query - sync status
+query GetSyncStatus {
+  event_source(where: { is_active: { _eq: true } }) {
+    id
+    name
+    api_type
+    
+    # Latest sync
+    sync_logs(
+      order_by: { started_at: desc }
+      limit: 1
+    ) {
+      status
+      started_at
+      completed_at
+      events_processed
+      events_added
+      events_updated
+      error_message
+    }
+    
+    # Event count
+    events_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }
+}
+
+# Mutations
+
+# 1. Create calendar subscription
+mutation CreateCalendarSubscription($name: String!, $filters: jsonb) {
+  insert_calendar_subscription_one(
+    object: {
+      name: $name
+      filters: $filters
+      share_token: "generate-random-token"
+    }
+  ) {
+    id
+    name
+    share_token
+  }
+}
+
+# 2. Trigger manual sync
+mutation TriggerSourceSync($sourceId: Int!) {
+  syncEventSource(source_id: $sourceId) {
+    events_processed
+    events_added
+    events_updated
+  }
+}
