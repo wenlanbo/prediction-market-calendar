@@ -123,12 +123,10 @@ export async function fetch42Markets() {
           traders: m.traders || 0,
           elapsedPercent: m.elapsed_pct || 0,
           image: m.image,
-          // IMPORTANT: 42.space API market_address doesn't work in URLs
-          // The API returns one address but URLs require a different identifier
-          // This is a known issue - the URL will load but won't show the correct market
-          url: get42SpaceUrl(m.market_address),
-          urlNote: 'NOTE: This URL may not show the correct market - 42.space has a URL mapping issue',
-          searchUrl: `https://42.space/search?q=${encodeURIComponent(m.title)}`,
+          // IMPORTANT: 42.space API doesn't provide working URLs
+          // The market_address from API doesn't work in their URL structure
+          // And they have no search function
+          url: null,
           source: '42'
         };
       });

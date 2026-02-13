@@ -316,14 +316,8 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                                 <div style="background: #444; padding: 10px; border-radius: 4px; margin-top: 5px;">
                                     <strong style="color: #10B981">42.space Market</strong><br>
                                     <span style="font-size: 0.85em; color: #ccc">Contract: ${match.market.contractAddress}</span><br>
-                                    <div style="margin-top: 8px;">
-                                        <a href="${match.market.searchUrl || match.market.url}" target="_blank" class="link-button" style="background: #10B981">
-                                            Search on 42.space →
-                                        </a>
-                                    </div>
-                                    <div style="font-size: 0.8em; color: #999; margin-top: 5px">
-                                        Search for: "${match.market.question.substring(0, 50)}..."<br>
-                                        Note: Direct market links have a known mapping issue
+                                    <div style="font-size: 0.8em; color: #999; margin-top: 8px">
+                                        ⚠️ Cannot link to 42.space - API doesn't provide working URLs
                                     </div>
                                 </div>
                             ` : `
@@ -346,9 +340,10 @@ function generateEnhancedHTML(matches, events, polymarkets, fortyTwoMarkets, cat
                                 <div style="margin-top: 10px; color: #999; font-size: 0.9em;">
                                     Volume: $${Math.round(market.volume || 0).toLocaleString()}
                                 </div>
-                                <a href="${market.url}" target="_blank" style="color: ${market.source === '42' ? '#10B981' : '#7c3aed'}; font-size: 0.9em;">
-                                    ${market.source === '42' ? '42.space →' : 'View →'}
-                                </a>
+                                ${market.source === '42' 
+                                    ? '<span style="color: #10B981; font-size: 0.9em;">42.space (no link available)</span>'
+                                    : `<a href="${market.url}" target="_blank" style="color: #7c3aed; font-size: 0.9em;">View →</a>`
+                                }
                             </div>
                         `).join('')}
                     </div>
@@ -402,7 +397,7 @@ ${matches.slice(0, 30).map(match => `
 - **Question**: ${match.market.question}
 - **Volume**: $${Math.round(match.market.volume || 0).toLocaleString()}
 - **End Date**: ${match.market.endDate ? new Date(match.market.endDate).toLocaleDateString() : 'N/A'}
-- **Link**: [View Market](${match.market.url})
+- **Link**: ${match.market.url ? `[View Market](${match.market.url})` : '42.space (no link available)'}
 `).join('\n---\n')}
 
 ## 📈 Top Markets by Volume
@@ -418,7 +413,8 @@ ${polymarkets.slice(0, 20).map((m, i) =>
 ${fortyTwoMarkets.slice(0, 20).map((m, i) => 
   `${i + 1}. **${m.question}**
    - Volume: $${Math.round(m.volume || 0).toLocaleString()}
-   - [View](${m.url})`
+   - Contract: ${m.contractAddress}
+   - (No direct link available)`
 ).join('\n')}
 
 ## 📅 Major Events Calendar 2025
